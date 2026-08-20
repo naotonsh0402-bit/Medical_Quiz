@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy Challenge V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game-container">
+
+    <!-- HOME -->
+    <section id="home-screen" class="screen">
+
+        <div class="logo">🧠</div>
+
+        <h1>Anatomy Challenge</h1>
+
+        <p class="subtitle">
+            Master the human body, one question at a time.
+        </p>
+
+        <div class="setup-card">
+
+            <h2>Choose Your Challenge</h2>
+
+            <h3>📚 Category</h3>
+
+            <div class="selection-grid">
+                <button class="select-btn category active" data-category="all">
+                    🧬 All Anatomy
+                </button>
+
+                <button class="select-btn category" data-category="skeletal">
+                    🦴 Skeletal
+                </button>
+
+                <button class="select-btn category" data-category="muscular">
+                    💪 Muscular
+                </button>
+
+                <button class="select-btn category" data-category="nervous">
+                    🧠 Nervous
+                </button>
+
+                <button class="select-btn category" data-category="cardiovascular">
+                    ❤️ Cardiovascular
+                </button>
+
+                <button class="select-btn category" data-category="respiratory">
+                    🫁 Respiratory
+                </button>
+            </div>
+
+            <h3>🎯 Difficulty</h3>
+
+            <div class="selection-grid difficulty-grid">
+
+                <button class="select-btn difficulty active"
+                        data-difficulty="easy">
+                    Easy
+                </button>
+
+                <button class="select-btn difficulty"
+                        data-difficulty="medium">
+                    Medium
+                </button>
+
+                <button class="select-btn difficulty"
+                        data-difficulty="hard">
+                    Hard
+                </button>
+
+            </div>
+
+        </div>
+
+        <button id="start-btn" class="main-btn">
+            ▶ Start Challenge
+        </button>
+
+        <div class="home-stats">
+            <div>
+                <span>🏆</span>
+                <small>High Score</small>
+                <strong id="home-high-score">0</strong>
+            </div>
+
+            <div>
+                <span>⭐</span>
+                <small>Total XP</small>
+                <strong id="home-xp">0</strong>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+    <section id="quiz-screen" class="screen hidden">
+
+        <header class="quiz-header">
+
+            <div>
+                <small>QUESTION</small>
+                <strong>
+                    <span id="question-number">1</span>/10
+                </strong>
+            </div>
+
+            <div id="lives">
+                ❤️ ❤️ ❤️
+            </div>
+
+            <div>
+                <small>XP</small>
+                <strong id="score">0</strong>
+            </div>
+
+        </header>
+
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div class="quiz-info">
+            <span id="category-label">🧬 Anatomy</span>
+            <span id="difficulty-label">Easy</span>
+            <span>🔥 <span id="streak">0</span></span>
+        </div>
+
+        <div class="timer">
+            ⏱️ <span id="timer">15</span>
+        </div>
+
+        <div class="question-card">
+
+            <div id="question-image" class="question-image">
+                🧠
+            </div>
+
+            <h2 id="question">
+                Question
+            </h2>
+
+            <div id="answers" class="answers">
+
+                <button class="answer-btn"></button>
+                <button class="answer-btn"></button>
+                <button class="answer-btn"></button>
+                <button class="answer-btn"></button>
+
+            </div>
+
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+
+    </section>
+
+
+    <!-- RESULT -->
+    <section id="result-screen" class="screen hidden">
+
+        <div class="result-icon">
+            🏆
+        </div>
+
+        <h1>Challenge Complete!</h1>
+
+        <div class="result-score">
+            <span id="final-score">0</span>
+            <small>XP</small>
+        </div>
+
+        <div class="result-grid">
+
+            <div>
+                <span>🎯</span>
+                <strong id="correct-count">0</strong>
+                <small>Correct</small>
+            </div>
+
+            <div>
+                <span>🔥</span>
+                <strong id="best-streak">0</strong>
+                <small>Best Streak</small>
+            </div>
+
+            <div>
+                <span>📊</span>
+                <strong id="accuracy">0%</strong>
+                <small>Accuracy</small>
+            </div>
+
+        </div>
+
+        <p id="result-message">
+            Great job!
+        </p>
+
+        <button id="restart-btn" class="main-btn">
+            🔄 Play Again
+        </button>
+
+        <button id="home-btn" class="secondary-btn">
+            🏠 Main Menu
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
